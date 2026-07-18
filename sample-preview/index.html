@@ -68,7 +68,13 @@
   /* ---------- hero ---------- */
   .hero {
     position: relative; overflow: hidden; color: var(--hero-ink);
-    background: linear-gradient(152deg, var(--hero-a) 12%, var(--hero-b) 100%);
+    background-color: var(--hero-a);
+    background-image:
+      linear-gradient(152deg,
+        color-mix(in srgb, var(--hero-a) 88%, transparent) 12%,
+        color-mix(in srgb, var(--hero-b) 82%, transparent) 100%),
+      url('https://gulfcoastsites.github.io/assets/painting/hero.jpg');
+    background-size: cover; background-position: center;
   }
   .hero-art { position: absolute; inset: 0; pointer-events: none; }
   .hero-in { position: relative; padding-top: 72px; padding-bottom: 64px; }
@@ -132,6 +138,14 @@
   .svc h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;
     letter-spacing: -0.01em; }
   .svc p { font-size: .93rem; color: var(--soft); line-height: 1.55; }
+
+  /* ---------- photo band ---------- */
+  .workband { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+    margin-top: 40px; }
+  .workband img { width: 100%; height: 150px; object-fit: cover;
+    border-radius: 14px; display: block;
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--ink) 12%, transparent); }
+  @media (min-width: 880px) { .workband img { height: 230px; } }
 
   /* ---------- about band ---------- */
   .about { background: var(--card);
@@ -276,6 +290,11 @@
         <p>One clear price for clearly described work.</p>
       </div>
       
+    </div>
+    <div class="workband">
+      <img src="https://gulfcoastsites.github.io/assets/painting/g1.jpg" alt="" loading="lazy">
+      <img src="https://gulfcoastsites.github.io/assets/painting/g2.jpg" alt="" loading="lazy">
+      <img src="https://gulfcoastsites.github.io/assets/painting/g3.jpg" alt="" loading="lazy">
     </div>
   </div>
 </section>

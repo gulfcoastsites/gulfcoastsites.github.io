@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Barlow Electric — Fort Walton Beach</title>
-<meta name="description" content="Barlow Electric provides electrical repair, wiring, and panel upgrade services for homes and businesses in Fort Walton Beach, Florida.">
+<meta name="description" content="Barlow Electric provides wiring, panel upgrades, and electrical repairs for homes and businesses in Fort Walton Beach, Florida.">
 <meta name="robots" content="noindex">
 <meta property="og:title" content="Barlow Electric — Fort Walton Beach">
-<meta property="og:description" content="Wiring Done Right, Start to Finish">
+<meta property="og:description" content="Electrical Work Done Right, Every Time">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#101b2d">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2324405e'/><text x='32' y='43' font-family='Georgia,serif' font-size='34' fill='%23fffdf5' text-anchor='middle'>B</text></svg>">
@@ -68,7 +68,13 @@
   /* ---------- hero ---------- */
   .hero {
     position: relative; overflow: hidden; color: var(--hero-ink);
-    background: linear-gradient(152deg, var(--hero-a) 12%, var(--hero-b) 100%);
+    background-color: var(--hero-a);
+    background-image:
+      linear-gradient(152deg,
+        color-mix(in srgb, var(--hero-a) 88%, transparent) 12%,
+        color-mix(in srgb, var(--hero-b) 82%, transparent) 100%),
+      url('https://gulfcoastsites.github.io/assets/generic/hero.jpg');
+    background-size: cover; background-position: center;
   }
   .hero-art { position: absolute; inset: 0; pointer-events: none; }
   .hero-in { position: relative; padding-top: 72px; padding-bottom: 64px; }
@@ -132,6 +138,14 @@
   .svc h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;
     letter-spacing: -0.01em; }
   .svc p { font-size: .93rem; color: var(--soft); line-height: 1.55; }
+
+  /* ---------- photo band ---------- */
+  .workband { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;
+    margin-top: 40px; }
+  .workband img { width: 100%; height: 150px; object-fit: cover;
+    border-radius: 14px; display: block;
+    box-shadow: 0 1px 3px color-mix(in srgb, var(--ink) 12%, transparent); }
+  @media (min-width: 880px) { .workband img { height: 230px; } }
 
   /* ---------- about band ---------- */
   .about { background: var(--card);
@@ -219,8 +233,8 @@
   </svg>
   <div class="wrap hero-in">
     <span class="eyebrow">Electrician · Fort Walton Beach</span>
-    <h1>Wiring Done Right, Start to Finish</h1>
-    <p class="sub">We handle electrical work for homes and businesses across Fort Walton Beach, from small repairs to full panel upgrades.</p>
+    <h1>Electrical Work Done Right, Every Time</h1>
+    <p class="sub">We handle wiring, panels, and repairs for homes and businesses throughout Fort Walton Beach and the surrounding Gulf Coast.</p>
     <div class="hero-cta">
       <a class="btn-main" href="tel:+18503077028"><svg><use href="#p-phone"/></svg>(850) 307-7028</a>
       <a class="btn-ghosted" href="#services">See what we do</a>
@@ -237,45 +251,50 @@
   <div class="wrap">
     <div class="kicker">What we do</div>
     <h2>What We Handle</h2>
-    <p class="lede">Electrical work covers a wide range, and here&#39;s where we focus.</p>
+    <p class="lede">From small fixes to full rewires, here is where we spend most of our time.</p>
     <div class="svc-grid">
       
       <div class="svc">
         <div class="svc-ico"><svg><use href="#p-check"/></svg></div>
         <h3>Panel Upgrades</h3>
-        <p>Replacing outdated panels so your home can safely handle modern power demands.</p>
+        <p>Replacing old or maxed-out panels so your home can handle modern loads safely.</p>
       </div>
       
       <div class="svc">
         <div class="svc-ico"><svg><use href="#p-star"/></svg></div>
         <h3>Wiring &amp; Rewiring</h3>
-        <p>Running new wiring or replacing old, worn wiring behind your walls.</p>
+        <p>New circuits or full rewires for older homes that were not built for today&#39;s usage.</p>
       </div>
       
       <div class="svc">
         <div class="svc-ico"><svg><use href="#p-shield"/></svg></div>
         <h3>Lighting Installation</h3>
-        <p>Indoor and outdoor fixtures, switches, and dimmers installed cleanly and correctly.</p>
+        <p>Indoor and outdoor fixtures wired correctly and positioned where they actually help.</p>
       </div>
       
       <div class="svc">
         <div class="svc-ico"><svg><use href="#p-clock"/></svg></div>
         <h3>Outlet &amp; Switch Repair</h3>
-        <p>Fixing dead outlets, flickering switches, and other everyday electrical issues.</p>
+        <p>Fixing dead outlets, flickering switches, and everything behind the wall plate.</p>
       </div>
       
       <div class="svc">
         <div class="svc-ico"><svg><use href="#p-tools"/></svg></div>
-        <h3>Circuit Troubleshooting</h3>
-        <p>Tracking down tripped breakers and short circuits to find the real cause.</p>
+        <h3>Troubleshooting</h3>
+        <p>Tracking down tripped breakers, warm outlets, and problems other electricians missed.</p>
       </div>
       
       <div class="svc">
         <div class="svc-ico"><svg><use href="#p-chat"/></svg></div>
-        <h3>Ceiling Fan Installation</h3>
-        <p>Mounting and wiring fans safely, with the support they need overhead.</p>
+        <h3>Storm &amp; Surge Protection</h3>
+        <p>Gulf Coast weather is hard on electrical systems, we help homes hold up to it.</p>
       </div>
       
+    </div>
+    <div class="workband">
+      <img src="https://gulfcoastsites.github.io/assets/generic/g1.jpg" alt="" loading="lazy">
+      <img src="https://gulfcoastsites.github.io/assets/generic/g2.jpg" alt="" loading="lazy">
+      <img src="https://gulfcoastsites.github.io/assets/generic/g3.jpg" alt="" loading="lazy">
     </div>
   </div>
 </section>
@@ -284,24 +303,24 @@
   <div class="wrap about-grid">
     <div class="about-copy">
       <div class="kicker">About us</div>
-      <h2>How We Approach the Work</h2>
-      <p>Electrical work only holds up if it&#39;s done with care the first time. We take the time to understand what&#39;s actually happening behind the wall before we touch anything, and we leave every job site as clean as we found it. Fort Walton Beach homes and businesses depend on wiring that works quietly in the background, and that&#39;s what we aim for.</p>
+      <h2>How We Approach Electrical Work</h2>
+      <p>Electrical work only looks simple until something is done wrong, then it is a safety problem hiding behind a wall. We test before we assume, we explain what we find in plain terms, and we wire things the way we would want them wired in our own house.</p>
     </div>
     <div class="why">
       
       <div class="why-item">
         <div class="why-ico"><svg><use href="#p-shield"/></svg></div>
-        <div><strong>Straight Answers</strong><span>We explain what&#39;s wrong and what it takes to fix it</span></div>
+        <div><strong>Straight Answers</strong><span>We tell you what is actually going on before any work starts.</span></div>
       </div>
       
       <div class="why-item">
         <div class="why-ico"><svg><use href="#p-clock"/></svg></div>
-        <div><strong>Careful Work</strong><span>Every connection checked before we call a job done</span></div>
+        <div><strong>Local to the Coast</strong><span>Based in Fort Walton Beach, familiar with local homes and conditions.</span></div>
       </div>
       
       <div class="why-item">
         <div class="why-ico"><svg><use href="#p-star"/></svg></div>
-        <div><strong>Local Focus</strong><span>We know Fort Walton Beach homes and how they&#39;re built</span></div>
+        <div><strong>Careful Work</strong><span>We test our work and clean up after ourselves, every job.</span></div>
       </div>
       
     </div>
@@ -321,7 +340,7 @@
   <div class="wrap">
     <div class="cta">
       <h2>Let&#39;s Talk About Your Electrical Work</h2>
-      <p>Give us a call and tell us what&#39;s going on, we&#39;re glad to walk through it with you.</p>
+      <p>Give us a call and tell us what you are seeing, we will help you figure out the next step.</p>
       <a class="btn-main" href="tel:+18503077028"><svg><use href="#p-phone"/></svg>Call Barlow Electric</a>
       <a class="phone-big" href="tel:+18503077028">(850) 307-7028</a>
     </div>
